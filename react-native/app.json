@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "Murder Mystery AI",
+    "slug": "murder-mystery-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0A0005",
+    "splash": { "image": "./assets/splash.png", "resizeMode": "contain", "backgroundColor": "#0A0005" },
+    "ios": { "bundleIdentifier": "com.redsitesoftware.murderMysteryAI", "supportsTablet": true },
+    "android": { "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#0A0005" }, "package": "com.redsitesoftware.murderMysteryAI" },
+    "web": { "favicon": "./assets/favicon.png", "bundler": "metro" }
+  }
+}
