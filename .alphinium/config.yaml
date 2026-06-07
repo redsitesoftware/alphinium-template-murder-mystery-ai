@@ -1,0 +1,28 @@
+version: '1'
+
+pods:
+  - name: app
+    dockerfile: Dockerfile
+    build_context: .
+    port: 80
+    health_check:
+      path: /health
+      interval_seconds: 30
+      timeout_seconds: 10
+    env_vars:
+      - name: EXPO_PUBLIC_API_URL
+        description: "Strapi backend URL for auth (e.g. https://backend.myapp.pods.alphinium.io)"
+      - name: EXPO_PUBLIC_APP_NAME
+        description: "App display name shown in the UI"
+      - name: EXPO_PUBLIC_ALPHINIUM_APP_ID
+        description: "alphinium-ai forge project ID (enables AI-generated mysteries)"
+      - name: EXPO_PUBLIC_ALPHINIUM_AI_KEY
+        description: "alphinium-ai API key for this forge project"
+      - name: EXPO_PUBLIC_ALPHINIUM_AI_ENDPOINT
+        description: "alphinium-ai gateway URL. Defaults to wss://api.ci-agents.chatinstance.com"
+      - name: EXPO_PUBLIC_ADMIN_EMAILS
+        description: "Comma-separated emails for admin access in-app"
+      - name: EXPO_PUBLIC_OAUTH_PROVIDERS
+        description: "Enabled OAuth providers (e.g. google,email)"
+      - name: EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY
+        description: "Stripe publishable key (optional)"
